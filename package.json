@@ -1,0 +1,27 @@
+{
+  "name": "lockui",
+  "version": "1.0.0",
+  "description": "Plugin para bloquear la interfaz de usuario con Javascript puro, sin utilizar jQuery.sin utilizar jQuery.",
+  "main": "lockui.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoet92/lockui.git"
+  },
+  "keywords": [
+    "LockUI",
+    "Bloquear",
+    "BlockUI"
+  ],
+  "author": "Tony Duran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoet92/lockui/issues"
+  },
+  "homepage": "https://github.com/yoet92/lockui#readme"
+}
