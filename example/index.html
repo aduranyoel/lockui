@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lock UI</title>
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Raleway:400,500,600" rel="stylesheet">
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <script>
+        window.addEventListener('load', () => {            
+            document.querySelector('.action-demo').addEventListener('click', () => { 
+                lockUI(); 
+                setTimeout(() => { unlockUI(); }, 3000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-center-content">
+            <h1 class="title">Lock UI</h1>
+            <h3 class="heading-3">
+                Plugin para bloquear la interfaz de usuario con Javascript puro,
+                <br/>
+                sin utilizar jQuery.
+            </h3>
+            <button class="button action-demo">Probar</button>
+            <a class="button" href="https://github.com/yoet92/lockui">Repositorio</a>
+        </div>
+    </section>
+    <script src="../lockui.js"></script>
+</body>
+</html>
