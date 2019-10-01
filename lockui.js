@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
-	(global.ui = factory());
+	(global.UI = factory());
 }(this, (function () {
 
     var lockHtmlParent = document.createElement('div');
@@ -17,7 +17,7 @@
         lockHtmlParent.appendChild(lockHtml);
         lockHtmlParent.appendChild(lockHtmlContainer);
 
-    var lockUI = function(options) {
+    var lock = function(options) {
         options = options || {};
         var parent = document.querySelector(options.selector) || document.body;
         if (parent === document.body) {
@@ -33,7 +33,7 @@
         parent.appendChild(lockHtmlParent);
     };
 
-    var unlockUI = function() {
+    var unlock = function() {
         var element = document.querySelector('.lockui-parent');
         if (element) {
             element.classList.add('is-unlocking');
@@ -47,8 +47,8 @@
     };
 
     return {
-        lockUI: lockUI,
-        unlockUI: unlockUI
+        lock: lock,
+        unlock: unlock
     }
 
  })))
