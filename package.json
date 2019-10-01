@@ -1,6 +1,6 @@
 {
   "name": "lockui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin para bloquear la interfaz de usuario con Javascript puro, sin utilizar jQuery.sin utilizar jQuery.",
   "main": "lockui.js",
   "directories": {
