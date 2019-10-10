@@ -10,8 +10,8 @@
     <script>
         window.addEventListener('load', () => {            
             document.querySelector('.action-demo').addEventListener('click', () => { 
-                lockUI(); 
-                setTimeout(() => { unlockUI(); }, 3000);
+                UI.lock(); 
+                setTimeout(() => { UI.unlock(); }, 3000);
             });
         });
     </script>
@@ -26,7 +26,7 @@
                 sin utilizar jQuery.
             </h3>
             <button class="button action-demo">Probar</button>
-            <a class="button" href="https://github.com/yoet92/lockui">Repositorio</a>
+            <a target="_blank" class="button" href="https://github.com/yoet92/lockui">Repositorio</a>
         </div>
     </section>
     <script src="../lockui.js"></script>
