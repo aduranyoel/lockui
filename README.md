@@ -3,19 +3,22 @@ Plugin para bloquear la interfaz de usuario con Javascript puro,
 sin utilizar jQuery.
 Basado en [BlockUI](https://github.com/malsup/blockui) y [FreezeUI](https://github.com/alexradulescu/FreezeUI)
 ## Instalación
-
-```html
-<html>
-  <body>
-    ...
-    <script src="/path/to/lockui.js" type="text/javascript"></script>
-  </body>
-</html>
+#### NPM
+```bash
+$ npm install --save lockui
 ```
-O importar como modulo
 ```js
 import UI from 'lockui';
 ```
+#### CDN
+```html
+ <script src="https://unpkg.com/lockui@latest/lockui.js" type="text/javascript"></script>
+```
+#### script
+```html
+  <script src="/path/to/lockui.js" type="text/javascript"></script>
+```
+
 ## Uso
 
 ### Simple
