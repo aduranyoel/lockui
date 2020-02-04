@@ -28,11 +28,10 @@
 		left: 35%;
 		border: none;
 		cursor: wait;
-		opacity: 0.5;
 		color: white;
 		font-size: 11px;
 		text-align: center;
-		background-color: black;
+		background-color: rgba(0,0,0,.5);
     	text-transform: uppercase;
 		-webkit-border-radius: 10px;
 		-moz-border-radius: 10px; 

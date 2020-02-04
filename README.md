@@ -3,30 +3,37 @@ Plugin para bloquear la interfaz de usuario con Javascript puro,
 sin utilizar jQuery.
 Basado en [BlockUI](https://github.com/malsup/blockui) y [FreezeUI](https://github.com/alexradulescu/FreezeUI)
 ## Instalación
-
-```html
-<html>
-  <body>
-    ...
-    <script src="/path/to/lockui.js" type="text/javascript"></script>
-  </body>
-</html>
+#### NPM
+```bash
+$ npm install --save lockui
 ```
+```js
+import UI from 'lockui';
+```
+#### CDN
+```html
+ <script src="https://unpkg.com/lockui@latest/lockui.js" type="text/javascript"></script>
+```
+#### script
+```html
+  <script src="/path/to/lockui.js" type="text/javascript"></script>
+```
+
 ## Uso
 
 ### Simple
 
 ```javascript
 // Bloquear Interfaz de Usuario
-lockUI();
+UI.lock();
 
 // Desbloquear Interfaz de Usuario
-unlockUI();
+UI.unlock();
 ```
 
 
 ## Opciones
-Puedes establecer algunas opciones cuando llamas la función lockUI().
+Puedes establecer algunas opciones cuando llamas la función `UI.lock()`
 
 Param | Type | Default | Details
 ------------ | ------------- | ------------- | -------------
@@ -35,11 +42,11 @@ selector | `string` | <body> body del documento | Elemento a bloquear.
 
 ### Ejemplos
 ```javascript
-lockUI(); // Para bloquear toda la página
-lockUI({ text: 'Custom text' }); // Bloquear con un texto personalizado
-lockUI({ selector: '.class-name' }); // Bloquear un cierto componente
-lockUI({ selector: '.component', text: 'Getting there...' }) // Usando ambas opciones a la vez. 
-unlockUI(); // Desbloquear la interfaz de usuario
+UI.lock(); // Para bloquear toda la página
+UI.lock({ text: 'Custom text' }); // Bloquear con un texto personalizado
+UI.lock({ selector: '#component' }); // Bloquear un cierto componente
+UI.lock({ selector: '.component', text: 'Getting there...' }) // Usando ambas opciones a la vez. 
+UI.unlock(); // Desbloquear la interfaz de usuario
 ```
 
 ## Licence
