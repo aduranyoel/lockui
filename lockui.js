@@ -19,19 +19,22 @@
     lockHtmlParent.appendChild(lockHtmlContainer);
 
     var lock = function (options) {
-        options = options || {};
-        var parent = document.querySelector(options.selector) || document.body;
-        if (parent === document.body) {
-            lockHtml.style.position = 'fixed';
-            lockHtmlContainer.style.position = 'fixed';
+        if (!document.querySelector('.lockui-parent')) {
+
+            options = options || {};
+            var parent = document.querySelector(options.selector) || document.body;
+            if (parent === document.body) {
+                lockHtml.style.position = 'fixed';
+                lockHtmlContainer.style.position = 'fixed';
+            }
+            lockHtmlContainer.innerHTML = options.text || 'Procesando...';
+            if (document.querySelector(options.selector)) {
+                lockHtmlParent.style.position = 'relative';
+                lockHtmlParent.style.width = '100%';
+                lockHtmlParent.style.height = '100%';
+            }
+            parent.appendChild(lockHtmlParent);
         }
-        lockHtmlContainer.innerHTML = options.text || 'Procesando...';
-        if (document.querySelector(options.selector)) {
-            lockHtmlParent.style.position = 'relative';
-            lockHtmlParent.style.width = '100%';
-            lockHtmlParent.style.height = '100%';
-        }
-        parent.appendChild(lockHtmlParent);
     };
 
     var unlock = function () {
@@ -39,7 +42,7 @@
         if (element) {
             element.classList.add('is-unlocking');
             setTimeout(() => {
-                if (element) {
+                if (element.parentElement) {
                     element.classList.remove('is-unlocking');
                     element.parentElement.removeChild(element);
                 }
